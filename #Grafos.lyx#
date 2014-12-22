@@ -1813,5 +1813,61 @@ Como podemos ver BFS recorre todo el grafo y va formando niveles desde la
  raiz.
 \end_layout
 
+\begin_layout Standard
+Este es el codigo en C++ del BFS:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Codigo_BFS.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+DFS (Depth First Search)
+\end_layout
+
+\begin_layout Standard
+Este recorrido es recursivo, y como su nombre indica (Busqueda en Profundidad)
+ lo que hace es entrar hasta lo mas profundo del grafo y luego enpieza a
+ retornar
+\end_layout
+
 \end_body
 \end_document

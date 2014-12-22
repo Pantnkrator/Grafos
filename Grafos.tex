@@ -43,7 +43,7 @@ que queramos (para los entusiastas la vida es un Grafo).
 
 \begin{center}
 
-\includegraphics[scale=0.3]{bolivia}
+\includegraphics[scale=0.3]{Ej_Mapa}
 
 Figura 1:Grafo donde las ciudades son Vértices y las carreteras los
 Arcos.
@@ -218,6 +218,94 @@ un par de enteros con el peso y el nodo:
 \includegraphics[scale=0.3]{Grafo_02} \includegraphics[scale=0.2]{AdjList_02}
 
 \includegraphics[scale=0.4]{Codigo_Grafo_04}
+
+\end{center}
+
+
+\section{Recorrido de un Grafo}
+
+Una ves armado el grafo, viene lo realmente importante que es que
+hacer con el en este caso lo que haremos seran 2 recorridos simples
+en todo el grafo, estos son:
+
+
+\subsection{BFS (Breadth First Search)}
+
+Este algoritmo recorre el grafo de manera progresiva y ordenada, lo
+recorre por niveles. BFS hace uso de una ``cola'' (queue) en la
+que coloca los nodos que visitara, de esta manera al terminar de visitar
+a los vecinos de la raíz continuara con los vecinos de estos y así
+sucesivamente.
+
+Ejemplo 2. Usaremos BFS para explorar el siguiente grafo:
+
+\begin{center}
+
+\includegraphics[scale=0.4]{BFS_01}
+
+\end{center}
+
+Tendremos como vértice raíz a 5,desde este nos expandiremos a todos
+sus vecinos, comenzamos metiendo al 5 en la cola:
+
+\begin{center}
+
+\includegraphics[scale=0.4]{BFS_02}
+
+\end{center}
+
+Ahora el algoritmo seguira corriendo mientras tengo vertices en la
+cola, es decir mientras haya vertices por visitar, ahora que nos encontramos
+en el vertice 5, lo sacamos de la cola y lo marcamos como visitado,
+metemos a todos sus vecinos a la cola:
+
+\begin{center}
+
+\includegraphics[scale=0.4]{BFS_03}
+
+\end{center}
+
+Ahora que estan todos sus vecinos en la cola, proseguimos con los
+siguientes, el primero en la cola es el vértice 1, por lo cual lo
+tomamos y encolamos a todos sus vecinos:
+
+\begin{center}
+
+\includegraphics[scale=0.4]{BFS_04}
+
+\end{center}
+
+Ahora vamos viendo como funciona el algoritmo, toma el primer elemento
+de la cola, lo visita, lo saca y encola a todos los vecinos de este,
+es por esto que se da la exploración en forma de niveles, sigamos:
+
+\begin{center}
+
+\includegraphics[scale=0.4]{BFS_05}
+
+\includegraphics[scale=0.4]{BFS_06}
+
+\includegraphics[scale=0.4]{BFS_07}
+
+\end{center}
+
+Ahora el ultimo elemento en la cola es 7 y como este no tiene vecinos
+sin visitar, lo sacamos de la cola esta queda vacia y termina el algoritmo:
+
+\begin{center}
+
+\includegraphics[scale=0.4]{BFS_08}
+
+\end{center}
+
+Como podemos ver BFS recorre todo el grafo y va formando niveles desde
+la raiz.
+
+Este es el codigo en C++ del BFS:
+
+\begin{center}
+
+\includegraphics[scale=0.4]{Codigo_BFS}
 
 \end{center}
 \end{document}

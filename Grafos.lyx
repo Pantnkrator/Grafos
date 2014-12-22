@@ -129,7 +129,7 @@ begin{center}
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename bolivia.png
+	filename Ej_Mapa.png
 	scale 30
 
 \end_inset
@@ -1449,6 +1449,393 @@ begin{center}
 \begin_layout Standard
 \begin_inset Graphics
 	filename Codigo_Grafo_04.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Recorrido de un Grafo
+\end_layout
+
+\begin_layout Standard
+Una ves armado el grafo, viene lo realmente importante que es que hacer
+ con el en este caso lo que haremos seran 2 recorridos simples en todo el
+ grafo, estos son:
+\end_layout
+
+\begin_layout Subsection
+BFS (Breadth First Search)
+\end_layout
+
+\begin_layout Standard
+Este algoritmo recorre el grafo de manera progresiva y ordenada, lo recorre
+ por niveles.
+ BFS hace uso de una 
+\begin_inset Quotes eld
+\end_inset
+
+cola
+\begin_inset Quotes erd
+\end_inset
+
+ (queue) en la que coloca los nodos que visitara, de esta manera al terminar
+ de visitar a los vecinos de la raíz continuara con los vecinos de estos
+ y así sucesivamente.
+\end_layout
+
+\begin_layout Standard
+Ejemplo 2.
+ Usaremos BFS para explorar el siguiente grafo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename BFS_01.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tendremos como vértice raíz a 5,desde este nos expandiremos a todos sus
+ vecinos, comenzamos metiendo al 5 en la cola:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename BFS_02.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora el algoritmo seguira corriendo mientras tengo vertices en la cola,
+ es decir mientras haya vertices por visitar, ahora que nos encontramos
+ en el vertice 5, lo sacamos de la cola y lo marcamos como visitado, metemos
+ a todos sus vecinos a la cola:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename BFS_03.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora que estan todos sus vecinos en la cola, proseguimos con los siguientes,
+ el primero en la cola es el vértice 1, por lo cual lo tomamos y encolamos
+ a todos sus vecinos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename BFS_04.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora vamos viendo como funciona el algoritmo, toma el primer elemento de
+ la cola, lo visita, lo saca y encola a todos los vecinos de este, es por
+ esto que se da la exploración en forma de niveles, sigamos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename BFS_05.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename BFS_06.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename BFS_07.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora el ultimo elemento en la cola es 7 y como este no tiene vecinos sin
+ visitar, lo sacamos de la cola esta queda vacia y termina el algoritmo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename BFS_08.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como podemos ver BFS recorre todo el grafo y va formando niveles desde la
+ raiz.
+\end_layout
+
+\begin_layout Standard
+Este es el codigo en C++ del BFS:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Codigo_BFS.png
 	scale 40
 
 \end_inset
