@@ -308,4 +308,106 @@ Este es el codigo en C++ del BFS:
 \includegraphics[scale=0.4]{Codigo_BFS}
 
 \end{center}
+
+
+\subsection{DFS (Depth First Search)}
+
+Este recorrido es recursivo, y como su nombre indica (Busqueda en
+Profundidad) lo que hace es entrar hasta lo mas profundo del grafo
+y luego empieza a retornar, para visualizar como funciona pintaremos
+los vertices de 2 colores, de gris si este nodo se esta procesando
+y de negro cuando ya fue procesado, tambien usaremos un borde rojo
+en el nodo en el que nos encontramos.
+
+Ejemplo 3.
+
+Usaremos DFS para recorrer el siguiente grafo:
+
+\begin{center}
+
+\includegraphics[scale=0.4]{DFS_01}
+
+\end{center}
+
+Primero tomaremos como raíz al vértice 1:
+
+\begin{center}
+
+\includegraphics[scale=0.4]{DFS_02}
+
+\end{center}
+
+DFS sigue este procedimiento desde el vértice en cual esta, explora
+sus vecinos y lanza un DFS en cada uno que no este visitado. Si no
+tiene mas vecinos que visitar vuelve y recorre los faltantes. 
+
+\begin{center}
+
+\includegraphics[scale=0.4]{DFS_03}
+
+\end{center}
+
+Ahora llegamos a un vértice que ya no tiene vecinos sin visitar por
+lo que lo visitamos (pintamos de negro) y volvemos a un vértice que
+aun se este procesando.
+
+\begin{center}
+
+\includegraphics[scale=0.4]{DFS_04}
+
+\includegraphics[scale=0.4]{DFS_05}
+
+\end{center}
+
+Como el vertice 2 aun tiene vecinos que procesar, lo mantenemos gris
+y continuamos.
+
+\begin{center}
+
+\includegraphics[scale=0.4]{DFS_06}
+
+\includegraphics[scale=0.4]{DFS_07}
+
+\end{center}
+
+Entonces tenemos ya la idea de como funciona el DFS, y podemos ver
+como funciona, cuando lleguemos a un nodo terminal lo marcamos de
+negro y retornamos a los que aun se están procesando, hasta haber
+recorrido todo el grafo.
+
+\begin{center}
+
+\includegraphics[scale=0.4]{DFS_08}
+
+\includegraphics[scale=0.4]{DFS_09}
+
+\includegraphics[scale=0.4]{DFS_10}
+
+\includegraphics[scale=0.4]{DFS_11}
+
+\includegraphics[scale=0.4]{DFS_12}
+
+\includegraphics[scale=0.4]{DFS_13}
+
+\includegraphics[scale=0.4]{DFS_14}
+
+\includegraphics[scale=0.4]{DFS_15}
+
+\includegraphics[scale=0.4]{DFS_16}
+
+\includegraphics[scale=0.4]{DFS_17}
+
+\includegraphics[scale=0.4]{DFS_18}
+
+\includegraphics[scale=0.4]{DFS_19}
+
+\end{center}
+
+El codigo en C++ es el siguiente:
+
+\begin{center}
+
+\includegraphics[scale=0.4]{Codigo_DFS}
+
+\end{center}
 \end{document}
